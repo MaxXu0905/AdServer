@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory name="HibernateSessionFactory0">
+		<property name="dialect">
+			org.hibernate.dialect.MySQL5Dialect
+		</property>
+		<property name="connection.driver_class">
+			com.mysql.jdbc.Driver
+		</property>
+		<!--property name="connection.url">jdbc:mysql://10.1.249.34:6688/devtepdb2?useUnicode=true&amp;characterEncoding=UTF8</property-->
+		<property name="connection.url">jdbc:mysql://192.168.1.111/devtepdb1?useUnicode=true&amp;characterEncoding=UTF8</property>
+		<property name="connection.username">devtepusr1</property>
+		<property name="connection.password">devtepusr1</property>
+		<property name="hbm2ddl.auto">update</property>
+		<property name="show_sql">true</property>
+		<property name="c3p0.min_size">5</property>
+		<property name="c3p0.max_size">20</property>
+		<property name="c3p0.timeout">180</property>
+		<property name="c3p0.max_statements">100</property>
+		<property name="current_session_context_class">thread</property>
+		<property name="hibernate.cache.provider_class">
+			org.hibernate.cache.internal.NoCacheProvider
+		</property>
+		<property name="hibernate.id.new_generator_mapping">true</property>
+		<mapping class="com.ailk.jdbc.entity.AdBalance" />
+		<mapping class="com.ailk.jdbc.entity.AdParticipant" />
+		<mapping class="com.ailk.jdbc.entity.HisCust" />
+		<mapping class="com.ailk.jdbc.entity.HisUser" />
+		<mapping class="com.ailk.jdbc.entity.InfoAd" />
+		<mapping class="com.ailk.jdbc.entity.InfoAdExt" />
+		<mapping class="com.ailk.jdbc.entity.InfoApp" />
+		<mapping class="com.ailk.jdbc.entity.InfoCity" />
+		<mapping class="com.ailk.jdbc.entity.InfoCode" />
+		<mapping class="com.ailk.jdbc.entity.InfoCodeExt" />
+		<mapping class="com.ailk.jdbc.entity.InfoContract" />
+		<mapping class="com.ailk.jdbc.entity.InfoCust" />
+		<mapping class="com.ailk.jdbc.entity.InfoPeriod" />
+		<mapping class="com.ailk.jdbc.entity.InfoQuiz" />
+		<mapping class="com.ailk.jdbc.entity.InfoUser" />
+		<mapping class="com.ailk.jdbc.entity.InfoUserExt" />
+		<mapping class="com.ailk.jdbc.entity.LogBehavior" />
+		<mapping class="com.ailk.jdbc.entity.LogCheckin" />
+		<mapping class="com.ailk.jdbc.entity.LogFeedback" />
+		<mapping class="com.ailk.jdbc.entity.LogInvestigation" />
+		<mapping class="com.ailk.jdbc.entity.LogPromotion" />
+		<mapping class="com.ailk.jdbc.entity.NameUser" />
+		<mapping class="com.ailk.jdbc.entity.PayCust" />
+		<mapping class="com.ailk.jdbc.entity.PayRqst" />
+		<mapping class="com.ailk.jdbc.entity.PayUser" />
+		<mapping class="com.ailk.jdbc.entity.RankBoard" />
+		<mapping class="com.ailk.jdbc.entity.SystemProperties" />
+		<mapping class="com.ailk.jdbc.entity.UserAd" />
+		<mapping class="com.ailk.jdbc.entity.UserAdStatus" />
+		<mapping class="com.ailk.jdbc.entity.UserPush" />
+		<mapping class="com.ailk.jdbc.entity.UserStatus" />
+		<mapping class="com.ailk.jdbc.entity.UserUrl" />
+	</session-factory>
+</hibernate-configuration>
